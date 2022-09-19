@@ -37,6 +37,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
         }
     } else {
         ListItems[tmp] = newTask;
+	localStorage.setItem('task', JSON.stringify(ListItems))
         input.value = " ";
         mood = 'create'
         AddBtn.innerHTML = "Add";
