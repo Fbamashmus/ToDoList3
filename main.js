@@ -37,7 +37,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
         }
     } else {
         ListItems[tmp] = newTask;
-	localStorage.setItem('task', JSON.stringify(ListItems))
+        localStorage.setItem('task', JSON.stringify(ListItems))
         input.value = " ";
         mood = 'create'
         AddBtn.innerHTML = "Add";
@@ -82,7 +82,7 @@ function showData() {
 	        <button onclick="updateTask(${i})" class="button" id="update"> <img src="https://i.postimg.cc/bYQL0s4V/edit.png" width="26px" hieght="26px"  ></button>
           </div>
           <div class="col col-l-1">
-            <button onclick="deleteTask(${i})" class="button" id="del"> <img src="https://cdn-icons-png.flaticon.com/24/484/484560.png" width="26px" hieght="26px" align-items="end"> </button>
+            <button onclick="deleteTask(${i})" class="button" id="del"> <img src="https://cdn-icons-png.flaticon.com/16/1345/1345823.png"  align-items="end"> </button>
           </div>
 
 
@@ -120,8 +120,7 @@ function deleteAll() {
 }
 
 //Edit task
-function updateTask(i) {
-
+function updateTask(i) { 
     AddBtn.innerHTML = "Edit";
     input.value = ListItems[i].text;
     mood = 'update';
